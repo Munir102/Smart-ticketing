@@ -22,6 +22,9 @@
                 extend: {
                 colors: {
                     green: '#1DD100',
+                    yellow: '#FFBF0F',
+                    pink: '#F78C9C',
+                    title_color: '#030712',
                 }
                 }
             }
@@ -34,7 +37,7 @@
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                   <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost bg-[#1DD1001A] lg:hidden">
+                    <div tabindex="0" role="button" class="btn btn-ghost bg-[#1DD1001A] xl:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
@@ -46,9 +49,9 @@
                       <li><a class="hover:text-green">Search</a></li>
                     </ul>
                   </div>
-                  <a class="lg:text-4xl md:text-3xl text-2xl font-extrabold sm:ml-2 xs:ml">Ticket <span class="text-green">Rush</span></a>
+                  <a class="xl:text-4xl md:text-3xl text-2xl font-extrabold sm:ml-2 xs:ml">Ticket <span class="text-green">Rush</span></a>
                 </div>
-                <div class="navbar-center hidden lg:flex">
+                <div class="navbar-center hidden xl:flex">
                   <ul class="menu menu-horizontal px-1b text-[18px] text-[#030712B3]">
                     <li><a class="hover:text-green text-green font-bold">Home</a></li>
                     <li>
@@ -59,7 +62,7 @@
                   </ul>
                 </div>
                 <div class="navbar-end">
-                    <button class="btn btn-outline hover:bg-white hover:border-green hover:text-green text-green bg-[#1DD1001A] lg:px-7 md:px-5">
+                    <button class="btn btn-outline hover:bg-white hover:border-green hover:text-green text-green bg-[#1DD1001A] xl:px-7 md:px-5">
                         <span class="font-bold text-xl">Bus</span>
                         <img class="hover:text-black" src="./images/bus-icon.png" alt="" srcset="">
                     </button>
@@ -68,48 +71,85 @@
         </section>
         <section class="banner bg-[url(images/banner.png)] bg-center bg-no-repeat bg-cover h-[600px] rounded-3xl mx-[18px] bg-black opacity-98">
           <div class="flex flex-col justify-center text-center items-center h-full gap-5">
-            <h1 class="font-raleway text-[64px] font-extrabold text-white">Enjoy your Travel with <br> <span class="text-green">Sky Line</span></h1>
+            <h1 class="font-raleway text-[64px] xl:font-extrabold text-white">Enjoy your Travel with <br> <span class="text-green">Sky Line</span></h1>
             <p class="text-xl leading-8 text-[#FFFFFFBF] font-inter">Streamline Your Journey: Introducing Our Smart Ticketing System <br>- Simplify Your Travel Experience Today!</p>
-            <button class="btn sm:btn-sm md:btn-md lg:btn-lg bg-green border-0 transition duration-500 ease-in-out">Buy Tickets</button>
+            <button class="btn sm:btn-sm md:btn-md xl:btn-xl bg-green border-0 transition duration-500 ease-in-out">Buy Tickets</button>
           </div>
-          <div>
-            <div class="flex gap-8 justify-center relative lg:-top-16">
+            <div class="flex flex-col md:flex-row lg:flex-row xl:flex-row md:gap-4 lg:gap-8 xl:gap-10 justify-center relative md:-top-11 lg:-top-16 xl:-top-16">
               <!-- card 1 -->
-              <div class="card bg-base-100 border-b-4 border-green flex flex-row justify-center items-center p-10 gap-6">
+              <div class="card bg-base-100 border-b-4 border-green flex flex-row justify-center items-center md:p-4 lg:p-6 xl:p-10 md:gap-3 lg:gap-4 xl:gap-6">
                 <div>
                   <img src="./images/people.png" alt="" srcset="">
                 </div>
                 <div class="card-body p-0">
-                  <h2 class="card-title font-inter font-bold text-4xl">600K+</h2>
-                  <p class="text-xl text-[#03071299]">Registered Clients</p>
+                  <h2 class="card-title font-inter font-bold md:text-2xl lg:text-3xl xl:text-4xl">600K+</h2>
+                  <p class="xl:text-xl lg:text-[18px] text-[#03071299]">Registered Clients</p>
                 </div>
               </div>
               <!-- card 2 -->
-              <div class="card bg-base-100 border-b-4 border-green flex flex-row justify-center items-center p-10 gap-6">
+              <div class="card bg-base-100 border-b-4 border-green flex flex-row justify-center items-center md:p-4 lg:p-6 xl:p-10 md:gap-3 lg:gap-4 xl:gap-6">
                 <div>
                   <img src="./images/ticket-cupon.png" alt="" srcset="">
                 </div>
                 <div class="card-body p-0">
-                  <h2 class="card-title font-inter font-bold text-4xl">1.5 lacks</h2>
-                  <p class="text-xl text-[#03071299]">Tickets sold</p>
+                  <h2 class="card-title font-inter font-bold md:text-2xl xl:text-4xl">1.5 lacks</h2>
+                  <p class="xl:text-xl lg:text-[18px] text-[#03071299]">Tickets sold</p>
                 </div>
               </div>
               <!-- card 3 -->
-              <div class="card bg-base-100 border-b-4 border-green flex flex-row justify-center items-center p-10 gap-6">
+              <div class="card bg-base-100 border-b-4 border-green flex flex-row justify-center items-center md:p-4 lg:p-6 xl:p-10 md:gap-3 lg:gap-4 xl:gap-6">
                 <div>
                   <img src="./images/stoppage.png" alt="" srcset="">
                 </div>
                 <div class="card-body p-0">
-                  <h2 class="card-title font-inter font-bold text-4xl">100K+</h2>
-                  <p class="text-xl text-[#03071299]">Rental partners</p>
+                  <h2 class="card-title font-inter font-bold md:text-2xl xl:text-4xl">50K+</h2>
+                  <p class="xl:text-xl lg:text-[18px] text-[#03071299]">Rental partners</p>
                 </div>
               </div>
             </div>
-          </div>
         </section>
     </header>
-    <main>
-      
+    <main class="container mx-auto mt-48">
+      <section class="best_offer_part flex flex-col justify-center items-center">
+        <div>
+          <h1 class="font-raleway font-bold text-[40px] title_color">Best offers for you</h1>
+        </div>
+        <div class="flex flex-row gap-6 mt-12">
+          <!-- 50% off card -->
+          <div class="card flex flex-row items-center bg-yellow shadow-xl font-inter">
+            <div class="card-body left p-12">
+              <h2 class="text-5xl font-bold">15% OFF</h2>
+              <p class="text-xl font-semibold">on your next purchase</p>
+              <p class="text-[18px] font-medium text-[#03071280]">use by Febroury 2024</p>
+            </div>
+            <div>
+              <img src="./images/cupon-devider.png" alt="" srcset="">
+            </div>
+            <div class="card-body left p-12">
+              <h2 class="text-[32px] font-raleway font-bold">NEW15</h2>
+              <p class="font-raleway font-medium text-xl text-[#03071266]">Coupon Code</p>
+            </div>
+          </div>
+          <!-- 220% off card -->
+          <div class="card flex flex-row items-center bg-pink shadow-xl font-inter">
+            <div class="card-body left p-12">
+              <h2 class="text-5xl font-bold">20% OFF</h2>
+              <p class="text-xl font-semibold">on your next purchase</p>
+              <p class="text-[18px] font-medium text-[#03071280]">use by Febroury 2024</p>
+            </div>
+            <div>
+              <img src="./images/cupon-devider.png" alt="" srcset="">
+            </div>
+            <div class="card-body left p-12">
+              <h2 class="text-[32px] font-raleway font-bold">Couple 20</h2>
+              <p class="font-raleway font-medium text-xl text-[#03071266]">Coupon Code</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>jasnd</h1>
+      </section>
     </main>
 </body>
 </html>
