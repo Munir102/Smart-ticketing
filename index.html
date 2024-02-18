@@ -25,6 +25,11 @@
                     yellow: '#FFBF0F',
                     pink: '#F78C9C',
                     title_color: '#030712',
+                    small_text: '#03071299',
+                    ticket_bg: '#F7F8F8',
+                    p_tag: '#03071299',
+                    btn_bg: '#1DD1001A',
+                    p_bg: '#03071217'
                 }
                 }
             }
@@ -32,7 +37,7 @@
     </script>
 </head>
 <body>
-    <header class="header container mx-auto mt-12">
+    <header class="header container mx-auto mt-10">
         <section class="navbar font-raleway mb-7">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -71,7 +76,7 @@
         </section>
         <section class="banner bg-[url(images/banner.png)] bg-center bg-no-repeat bg-cover h-[600px] rounded-3xl mx-[18px] bg-black opacity-98">
           <div class="flex flex-col justify-center text-center items-center h-full gap-5">
-            <h1 class="font-raleway text-[64px] xl:font-extrabold text-white">Enjoy your Travel with <br> <span class="text-green">Sky Line</span></h1>
+            <h1 class="font-raleway text-[64px] xl:font-extrabold text-white">Enjoy your Travel with <br> <span class="text-green">Royal Bus Liners</span></h1>
             <p class="text-xl leading-8 text-[#FFFFFFBF] font-inter">Streamline Your Journey: Introducing Our Smart Ticketing System <br>- Simplify Your Travel Experience Today!</p>
             <button class="btn sm:btn-sm md:btn-md xl:btn-xl bg-green border-0 transition duration-500 ease-in-out">Buy Tickets</button>
           </div>
@@ -109,11 +114,13 @@
             </div>
         </section>
     </header>
-    <main class="container mx-auto mt-48">
-      <section class="best_offer_part flex flex-col justify-center items-center">
+    <main class="mx-auto mt-48">
+      <section class="container mx-auto best_offer_part flex flex-col justify-center items-center">
+        <!-- section title -->
         <div>
           <h1 class="font-raleway font-bold text-[40px] title_color">Best offers for you</h1>
         </div>
+        <!-- cuppon card -->
         <div class="flex flex-row gap-6 mt-12">
           <!-- 50% off card -->
           <div class="card flex flex-row items-center bg-yellow shadow-xl font-inter">
@@ -146,9 +153,79 @@
             </div>
           </div>
         </div>
+        <!-- see all button -->
+        <button class="btn btn-outline hover:bg-[#1DD1001A] hover:border-green hover:text-green text-green mt-16 xl:px-7 lg:px-5">
+          <span class="font-raleway font-bold text-xl">See All Offers</span>
+      </button>
       </section>
-      <section>
-        <h1>jasnd</h1>
+      <!-- ticket buy part start -->
+      <section class="card mt-[120px] bg-ticket_bg border-t-4 border-green rounded-t-[60px]">
+          <div class="container mx-auto card-body p-0 font-raleway">
+            <!-- Royal Bus Liners poribahan part start -->
+            <div class="flex flex-col justify-center items-center text-center pt-[100px] gap-6">
+              <h1 class="font-bold text-[40px]">Royal Bus Liners</h1>
+              <p class="leading-8 p_tag text-lg"> From the moment you board until your destination, our mission is to provide unparalleled <br> service, elevating your travel experience to new heights.</p>
+            </div>
+            <!-- ticket card -->
+            <div class="card mx-[18px] bg-white mt-12">
+              <div class="card-body font-raleway p-0 flex flex-row">
+                <div class="left w-3/5 p-8">
+                  <!-- top part -->
+                  <div class="top flex flex-row justify-between">
+                    <div class="flex items-center gap-5">
+                      <img src="./images/bus-logo.png" class="h-12 mt-1" alt="" srcset="">
+                      <div>
+                        <h1 class="font-bold text-[32px]">Royal Bus Liners</h1>
+                        <p>Coach-201-BUS ! AC-Business</p>
+                      </div>
+                    </div>
+                    <div class="flex flex-row items-center bg-btn_bg gap-2 px-4 rounded-lg">
+                      <img src="./images/seat-green.png" class="h-6" alt="" srcset="">
+                      <p class="font-inter font-medium text-[18px] text-green">40 Seats left</p>
+                    </div>
+                  </div>
+                  <!-- body part -->
+                  <div class="card bg-ticket_bg mt-6">
+                    <div class="card-body">
+                      <div class="flex justify-between w-full border-dashed border-b-2 pb-6 font-semibold">
+                        <p class="text-small_text">Route</p>
+                        <p>Dhaka - Cox Bazar</p>
+                      </div>
+                      <div class="flex justify-between w-full border-dashed border-b-2 pb-6 pt-4 font-semibold">
+                        <p class="text-small_text">Departure Time</p>
+                        <p>10:00 PM</p>
+                      </div>
+                      <div class="flex justify-between pt-6 gap-4 text-center">
+                        <div class="bg-p_bg rounded-lg flex-grow p-2">
+                          <p class="font-inter font-medium">Boarding Point - Dhaka</p>
+                        </div>
+                        <div class="bg-p_bg rounded-lg flex-grow p-2">
+                          <p class="font-inter font-medium">Dropping Point - Dolphin More</p>
+                        </div>
+                        <div class="bg-p_bg rounded-lg flex-grow p-2">
+                          <p class="font-inter font-medium">Est. Time - 11 Hour</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="devider w-1/10">
+                  <img src="./images/info-devider.png" alt="" srcset="">
+                </div>
+                <div class="flex flex-col items w-3/10">
+                  <img src="./images/fare.png" alt="" srcset="">
+                  <h1>550 Taka</h1>
+                  <p>Per Seat</p>
+                </div>
+              </div>
+            </div>
+            <!-- Royal Bus Liners poribahan part end -->
+          </div>
+      </section>
+      <!-- ticket buy part end -->
+
+      <section class="mt-20 ">
+        <h1>hdjufjdsik</h1>
       </section>
     </main>
 </body>
