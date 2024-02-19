@@ -29,7 +29,8 @@
                     ticket_bg: '#F7F8F8',
                     p_tag: '#03071299',
                     btn_bg: '#1DD1001A',
-                    p_bg: '#03071217'
+                    p_bg: '#03071217',
+                    seat_bg: '#F7F8F8',
                 }
                 }
             }
@@ -168,8 +169,8 @@
               <p class="leading-8 p_tag text-lg"> From the moment you board until your destination, our mission is to provide unparalleled <br> service, elevating your travel experience to new heights.</p>
             </div>
             <!-- ticket card -->
-            <div class="card mx-[18px] bg-white mt-12 grid grid-cols-12 gap-4">
-              <div class="col-span-8 p-8">
+            <div class="card mx-[18px] bg-white mt-12 grid grid-cols-12 gap-4 shadow-md">
+              <div class="left col-span-8 p-8">
                   <!--ticoet top part -->
                   <div class="top flex flex-row justify-between">
                       <div class="flex items-center gap-5">
@@ -189,11 +190,11 @@
                       <div class="card-body">
                           <div class="flex justify-between w-full border-dashed border-b-2 pb-6 font-semibold">
                               <p class="text-small_text">Route</p>
-                              <p>Dhaka - Cox Bazar</p>
+                              <p class="text-end">Dhaka - Cox Bazar</p>
                           </div>
                           <div class="flex justify-between w-full border-dashed border-b-2 pb-6 pt-4 font-semibold">
                               <p class="text-small_text">Departure Time</p>
-                              <p>10:00 PM</p>
+                              <p class="text-end">10:00 PM</p>
                           </div>
                           <div class="flex justify-between pt-6 gap-4 text-center">
                               <div class="bg-p_bg rounded-lg flex-grow p-2">
@@ -223,6 +224,292 @@
               </div>
             </div>
 
+            <!-- select seat -->
+            <div class="card mx-[18px] bg-white my-7 font-raleway shadow-md">
+              <div class="card-body grid grid-cols-12">
+                <!-- seat arrangement -->
+                <div class="left_part col-span-6 flex flex-col">
+                  <h1 class="w-full border-dashed border-b-2 pb-6 font-semibold text-2xl text-title_color">Select Your Seat</h1>
+                  <!-- seat available or selected -->
+                  <div class="flex flex-row justify-between w-full border-dashed border-b-2 py-6">
+                    <div class="flex items-center gap-2">
+                      <img src="./images/seat-gray.png" alt="" srcset="">
+                      <p class="text-[18px] font-medium text-small_text">Available</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <img src="./images/seat-green-filled.png" alt="" srcset="">
+                      <p class="text-[18px] font-medium text-green">Selected</p>
+                    </div>
+                  </div>
+                  <!-- driver seat -->
+                  <div class="flex justify-end py-6">
+                    <img class="py-5 px-12 rounded-lg bg-[#0307121A]" src="./images/car_str.png" alt="" srcset="">
+                  </div>
+                  <div class="all_seats grid grid-cols-12">
+                    <!-- seat name -->
+                    <div class="col-span-2 flex flex-col gap-12 font-inter text-xl font-medium text-small_text">
+                      <p>A</p>
+                      <p>B</p>
+                      <p>C</p>
+                      <p>D</p>
+                      <p>E</p>
+                      <p>F</p>
+                      <p>G</p>
+                      <p>H</p>
+                      <p>I</p>
+                      <p>J</p>
+                    </div>
+                    <!-- seats -->
+                    <div class="col-span-10 font-inter text-xl font-medium">
+                      <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">A1</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">A2</p>
+                          </div>
+                        </div>
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">A3</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">A4</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-row justify-between mt-6">
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">B1</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">B2</p>
+                          </div>
+                        </div>
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">B3</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">B4</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-row justify-between mt-6">
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">C1</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">C2</p>
+                          </div>
+                        </div>
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">C3</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">C4</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-row justify-between mt-6">
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">D1</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">D2</p>
+                          </div>
+                        </div>
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">D3</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">D4</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-row justify-between mt-6">
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">E1</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">E2</p>
+                          </div>
+                        </div>
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">E3</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">E4</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-row justify-between mt-6">
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">F1</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">F2</p>
+                          </div>
+                        </div>
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">F3</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">F4</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-row justify-between mt-6">
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">G1</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">G2</p>
+                          </div>
+                        </div>
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">G3</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">G4</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-row justify-between mt-6">
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">H1</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">H2</p>
+                          </div>
+                        </div>
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">H3</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">H4</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-row justify-between mt-6">
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">I1</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">I2</p>
+                          </div>
+                        </div>
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">I3</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">I4</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-row justify-between mt-6">
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">J1</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">J2</p>
+                          </div>
+                        </div>
+                        <div class="flex flex-row gap-6">
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">J3</p>
+                          </div>
+                          <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
+                            <p class=" text-small_text">J4</p>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                <div class="middle col-span-1 flex justify-center h-full">
+                  <img src="./images/Line 1.png" alt="" srcset="">
+                </div>
+                <!-- seet booking list -->
+                <div class="right_part col-span-5 text-base">
+                  <div>
+                    <h1 class="w-full border-dashed border-b-2 pb-6 font-semibold text-2xl text-title_color">Select Your Seat</h1>
+                    <div class="card bg-seat_bg my-6 font-inter font-medium text-title_color">
+                      <div class="card-body">
+                        <div class="flex flex-row border-dashed justify-between items-center border-b-2 pb-3">
+                          <h1>Seat <span class="badge bg-green text-white font-bold">2</span></h1>
+                          <h1>Class</h1>
+                          <h1>Price</h1>
+                        </div>
+                        <div class="grid grid-cols-12 w-full text-base text-small_text">
+                          <div class="col-span-4 leading-8">
+                            <p>C1</p>
+                            <p>C2</p>
+                          </div>
+                          <div class="col-span-4 text-center leading-8 pl-14">
+                            <p>Business</p>
+                            <p>Business</p>
+                          </div>
+                          <div class="col-span-4 text-end leading-8">
+                            <p>550</p>
+                            <p>550</p>
+                          </div>
+                        </div>
+                        <!-- total -->
+                        <div class="flex justify-between border-t-2 pt-4">
+                          <h1>Total Price</h1>
+                          <h1>BDT 1100</h1>
+                        </div>
+                        <!-- cuppon index -->
+                        <div class="mt-2 flex justify-between">
+                          <input type="text" class="p-3 w-3/4 rounded-lg text-base font-normal" name="" id="" placeholder="Have any coupon?">
+                          <button class="btn bg-green text-white px-10 rounded-lg">Apply</button>
+                        </div>
+
+                        <!--grand total -->
+                        <div class="flex justify-between pt-4">
+                          <h1>Grand Total</h1>
+                          <h1>BDT 1100</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- passenger details input fields -->
+                    <div class="flex flex-col gap-4 font-semibold">
+                      <h1>Passenger Name<span class="">*</span></h1>
+                      <input type="text" name="" id="" placeholder="Enter your name" class="w-full p-3 font-medium border rounded-md">
+                      <h1>Phone Number<span>*</span></h1>
+                      <input type="tel" name="" id="" placeholder="Enter your phone number" class="w-full p-3 font-medium border rounded-md">
+                      <h1>Email ID</h1>
+                      <input type="email" name="" id="" placeholder="Enter your email id" class="w-full p-3 font-medium border rounded-md">
+                      <button class="btn bg-green text-white font-semibold text-xl">Next</button>
+                    </div>
+                    <!-- terms and policy -->
+                    <div class="flex justify-center text-center py-4 gap-20 text-small_text font-semibold">
+                      <a href=""><p class="border-b-4">Terms and Conditions</p></a>
+                      <a href=""><p class="border-b-4">Cancellation Policy</p></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- Royal Bus Liners poribahan part end -->
           </div>
       </section>
