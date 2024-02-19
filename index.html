@@ -141,7 +141,7 @@
                 <p class="font-raleway font-medium text-xl text-[#03071266]">Coupon Code</p>
               </div>
             </div>
-            <!-- 220% off card -->
+            <!-- 20% off card -->
             <div class="card flex flex-row items-center bg-pink shadow-xl font-inter">
               <div class="card-body left p-12">
                 <h2 class="text-5xl font-bold">20% OFF</h2>
@@ -167,7 +167,7 @@
             <div class="container mx-auto card-body p-0 font-raleway py-[100px]">
               <!-- Royal Bus Liners poribahan part start -->
               <!-- section title -->
-              <div class="flex flex-col justify-center items-center text-center  gap-6">
+              <div class="flex flex-col justify-center items-center text-center gap-6">
                 <h1 class="font-bold text-[40px]">Royal Bus Liners</h1>
                 <p class="leading-8 p_tag text-lg"> From the moment you board until your destination, our mission is to provide unparalleled <br> service, elevating your travel experience to new heights.</p>
               </div>
@@ -250,7 +250,7 @@
                     </div>
                     <div class="all_seats grid grid-cols-12">
                       <!-- seat name -->
-                      <div class="col-span-2 flex flex-col gap-12 font-inter text-xl font-medium text-small_text">
+                      <div class="col-span-2 flex flex-col pl-8 mt-6 gap-8 font-inter text-xl font-medium text-small_text">
                         <p>A</p>
                         <p>B</p>
                         <p>C</p>
@@ -263,7 +263,7 @@
                         <p>J</p>
                       </div>
                       <!-- seats -->
-                      <div class="col-span-10 font-inter text-xl font-medium">
+                      <div id="bus-seat" class="col-span-10 font-inter text-xl font-medium">
                         <div class="flex flex-row justify-between">
                           <div class="flex flex-row gap-6">
                             <div class="flex text-center items-center h-16 w-[118px] rounded-lg bg-seat_bg">
@@ -464,34 +464,36 @@
                           </div>
                           <div class="grid grid-cols-12 w-full text-base text-small_text">
                             <div class="col-span-4 leading-8">
-                              <p>C1</p>
-                              <p>C2</p>
+                                <div id="current-seats"></div>
                             </div>
                             <div class="col-span-4 text-center leading-8 pl-14">
-                              <p>Business</p>
-                              <p>Business</p>
+                                <div id="business-class"></div>
                             </div>
                             <div class="col-span-4 text-end leading-8">
-                              <p>550</p>
-                              <p>550</p>
+                                <div id="price"></div>
                             </div>
-                          </div>
+                        </div>
                           <!-- total -->
                           <div class="flex justify-between border-t-2 pt-4">
                             <h1>Total Price</h1>
-                            <h1>BDT 1100</h1>
+                            <h1 >BDT <span id="total-cost">0</span></h1>
                           </div>
                           <!-- cuppon index -->
-                          <div class="mt-2 flex justify-between">
-                            <input type="text" class="p-3 w-3/4 rounded-lg text-base font-normal" name="" id="" placeholder="Have any coupon?">
-                            <button class="btn bg-green text-white px-10 rounded-lg">Apply</button>
+                          <div id="cuppon-section" class="mt-2 flex justify-between">
+                            <input type="text" class="p-3 w-3/4 rounded-lg text-base font-normal" name="" id="cuponInput" placeholder="Have any coupon?" >
+                            <button id="CupponButton" class="btn bg-green text-white px-10 rounded-lg" disabled>Apply</button>
                           </div>
 
-                          <!--grand total -->
-                          <div class="flex justify-between pt-4">
-                            <h1>Grand Total</h1>
-                            <h1>BDT 1100</h1>
+                          <div id="cuppon-section1" class="my-2 flex justify-between hidden">
+                            <h1 class="text-green">Discount amount</h1>
+                            <h1 class="text-green"> - <span id="discountAmount"></span>0</h1>
                           </div>
+                          <!--grand total -->
+                          <div class="flex justify-between border-t-2 pt-4">
+                            <h1>Grand Total</h1>
+                            <h1>BDT <span id="grand-total">0</span></h1>
+                          </div>
+                          
                         </div>
                       </div>
                       <!-- passenger details input fields -->

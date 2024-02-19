@@ -1,3 +1,6 @@
+// import { totalSetNow } from './smart-ticket.js';
+// console.log(totalSetNow);
+
 function setBackgroundColotById(element) {
     element.classList.add('bg-[#1DD100]');
 }
@@ -15,13 +18,14 @@ function addElementById(element) {
     return element;
 }
 
-function addSeat(element) {
+function addSeat() {
     const currentSelectSeat = document.getElementById('select-seat');
     const currentSelectSeatText = currentSelectSeat.innerText;
     const currentSelected = parseInt(currentSelectSeatText);
     const totalSeat = currentSelected + 1;
     currentSelectSeat.innerText = totalSeat;
-    return element;
+    // totalSetNow= totalSeat
+    return totalSeat;
 }
 
 function substactionElementById(element) {
@@ -33,11 +37,42 @@ function substactionElementById(element) {
     return element;
 }
 
-function subSeat(element) {
+function subSeat() {
     const currentSelectSeat = document.getElementById('select-seat');
     const currentSelectSeatText = currentSelectSeat.innerText;
     const currentSelected = parseInt(currentSelectSeatText);
     const totalSeat = currentSelected - 1;
     currentSelectSeat.innerText = totalSeat;
-    return element;
+    // totalSetNow= totalSeat
+    return totalSeat;
 }
+
+function addCurrentSeat(element, businessclass, price) {
+    const currentSeatsElement = document.getElementById('current-seats');
+    const businessElement = document.getElementById('business-class');
+    const priceElement = document.getElementById('price');
+
+    const seatPTag = document.createElement('p');
+    const classPTag = document.createElement('p');
+    const pricePTag = document.createElement('p');
+
+    seatPTag.textContent = element;
+    classPTag.textContent = businessclass;
+    pricePTag.textContent = price;
+
+    currentSeatsElement.appendChild(seatPTag);
+    businessElement.appendChild(classPTag);
+    priceElement.appendChild(pricePTag);
+}
+
+// function removeCurrentSeat(element) {
+//     const currentSeatsElement = document.getElementById('current-seats');
+//     const seatElements = currentSeatsElement.querySelectorAll('div');
+//     seatElements.forEach(seatElement => {
+//         if (seatElement.textContent === element) {
+//             seatElement.remove();
+//         }
+//     });
+// }
+
+
