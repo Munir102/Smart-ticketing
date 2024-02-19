@@ -39,7 +39,7 @@
 </head>
 <body>
     <!-- main page -->
-    <section class="hidden">
+    <section class="">
       <header class="header container mx-auto mt-10">
         <section class="navbar font-raleway mb-7">
             <div class="navbar bg-base-100">
@@ -81,7 +81,7 @@
           <div class="flex flex-col justify-center text-center items-center h-full gap-5">
             <h1 class="font-raleway text-[64px] xl:font-extrabold text-white">Enjoy your Travel with <br> <span class="text-green">Royal Bus Liners</span></h1>
             <p class="text-xl leading-8 text-[#FFFFFFBF] font-inter">Streamline Your Journey: Introducing Our Smart Ticketing System <br>- Simplify Your Travel Experience Today!</p>
-            <button class="btn sm:btn-sm md:btn-md xl:btn-xl bg-green border-0 transition duration-500 ease-in-out font-bold text-xl">Buy Tickets</button>
+            <button class="btn sm:btn-sm md:btn-md xl:btn-xl bg-green border-0 transition duration-500 ease-in-out font-bold text-xl" onclick="scrollToSection()">Buy Tickets</button>
           </div>
             <div class="flex flex-col md:flex-row lg:flex-row xl:flex-row md:gap-4 lg:gap-8 xl:gap-10 justify-center relative md:-top-11 lg:-top-16 xl:-top-16">
               <!-- card 1 -->
@@ -162,7 +162,7 @@
           </button>
         </section>
         <!-- ticket buy part start -->
-        <section class="card mt-[120px] bg-ticket_bg border-t-4 border-green rounded-t-[60px]">
+        <section id="ticket-section" class="card mt-[120px] bg-ticket_bg border-t-4 border-green rounded-t-[60px]">
             <div class="container mx-auto card-body p-0 font-raleway py-[100px]">
               <!-- Royal Bus Liners poribahan part start -->
               <!-- section title -->
@@ -219,14 +219,14 @@
                 <!-- per ticket amount -->
                 <div class="right col-span-2 flex justify-center items-center pl-5">
                     <div class="flex flex-col justify-center items-center">
-                      <img src="./images/fare.png" alt="" srcset="">
+                      <img src="./images/fare.png" alt="" srcset="" class="mb-2">
                       <h1 class="font-bold text-[32px] text-title_color">550 Taka</h1>
                       <p class="font-semibold text-2xl text-small_text">Per Seat</p>
                     </div>
                 </div>
               </div>
 
-              <!-- select seat -->
+              <!-- select seat and booking list -->
               <div class="card mx-[18px] bg-white my-7 font-raleway shadow-md">
                 <div class="card-body grid grid-cols-12">
                   <!-- seat arrangement -->
@@ -551,7 +551,7 @@
     </section>
 
     <!-- modal for alert -->
-    <section class="flex justify-center items-center font-roboto bg-[#F7F8F8] min-h-screen">
+    <section class="flex justify-center items-center font-roboto bg-[#F7F8F8] min-h-screen hidden">
       <div class="flex flex-col justify-center items-center text-center gap-8 p-14 bg-white rounded-xl shadow-md">
         <img src="./images/success.png" class="h-24 w-24" alt="" srcset="">
         <h1 class="font-bold text-2xl text-green">Success</h1>
@@ -564,5 +564,6 @@
         </div>
       </div>
     </section>
+    <script src="./js/smart-ticket.js"></script>
 </body>
 </html>
