@@ -14,4 +14,24 @@ function scrollToSection() {
 }
 
 
+document.addEventListener('click', function(event) {
+    const clickedSeatId = event.target.id;
+    const currentSeat = event.target.innerText;
+    console.log(currentSeat);
+    if (clickedSeatId) {
+        const parentDiv = event.target.parentNode;
+        console.log(parentDiv);
+        checkBgColor = parentDiv.classList.contains('bg-[#1DD100]');
+        if (checkBgColor) {
+            removeBackgroundColotById(parentDiv);
+            addElementById();
+            subSeat();
+        }else{
+            setBackgroundColotById(parentDiv);
+            substactionElementById();
+            addSeat();
+        }
+    }
+});
+
 
