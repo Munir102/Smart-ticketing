@@ -51,11 +51,25 @@ document.getElementById('bus-seat').addEventListener('click', function(event) {
 
 function toggleButton() {
     let inputField = document.getElementById('cuponInput');
+    let nameInputField = document.getElementById('nameInput');
+    let phoneInputField = document.getElementById('phoneInput');
     let button = document.getElementById('CupponButton');
+    let inputFieldButton = document.getElementById('inputButton');
     button.disabled = !inputField.value;
+    // inputFieldButton.disabled = !nameInputField.value || !phoneInputField.value;
+
+    if (!nameInputField.value || !phoneInputField.value) {
+        inputFieldButton.disabled = true;
+    } else {
+        inputFieldButton.disabled = false;
+    }
 }
 
+toggleButton();
+
 document.getElementById('cuponInput').addEventListener('input', toggleButton);
+document.getElementById('nameInput').addEventListener('input', toggleButton);
+document.getElementById('phoneInput').addEventListener('input', toggleButton);
 
 document.getElementById('CupponButton').addEventListener('click', ()=>{
     let inputField = document.getElementById('cuponInput');
@@ -63,22 +77,21 @@ document.getElementById('CupponButton').addEventListener('click', ()=>{
     let cupponDiv1 = document.getElementById('cuppon-section1');
     let value = inputField.value;
     if(value == "NEW15"){
-        cupponDiv.classList.add('hidden')
-        cupponDiv1.classList.remove('hidden')
+        cupponDiv.classList.add('hidden');
+        cupponDiv1.classList.remove('hidden');
         // cupponDiv.classList.add('hidden')
-        alert("Your cuppon has been added successfully!!")
-        const grandCost = totalCost - (totalCost * (15/100))
+        alert("Cuppon has been added successfully!!")
+        let grandCost = totalCost - (totalCost * (15 / 100));
         grandTotal.innerHTML = grandCost;
         discountAmounts = totalCost - grandCost;
         discountTotal.innerHTML = discountAmounts;
     }
 
     if (value == "Couple 20") {
-        cupponDiv.classList.add('hidden')
-        cupponDiv1.classList.remove('hidden')
-        // cupponDiv.classList.add('hidden')
-        alert("Your cuppon has been added successfully!!")
-        const grandCost = totalCost - (totalCost * (20/100))
+        cupponDiv.classList.add('hidden');
+        cupponDiv1.classList.remove('hidden');
+        alert("Coupon has been added successfully!!");
+        let grandCost = totalCost - (totalCost * (20 / 100));
         grandTotal.innerHTML = grandCost;
         discountAmounts = totalCost - grandCost;
         discountTotal.innerHTML = discountAmounts;
