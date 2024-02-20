@@ -37,14 +37,18 @@ document.getElementById('bus-seat').addEventListener('click', function(event) {
             grandTotal.innerHTML = totalCost
             removeCurrentSeat(currentSeat);
         }else{
-            setBackgroundColotById(parentDiv);
-            substactionElementById();
-            addSeat();
-            totalSetNow = totalSetNow + 1;
-            totalCost = totalSetNow * 550;
-            amountHeader.innerHTML = totalCost;
-            grandTotal.innerHTML = totalCost;
-            addCurrentSeat(currentSeat, "Business", "550");
+            if (totalSetNow < 4) {
+                setBackgroundColotById(parentDiv);
+                substactionElementById();
+                addSeat();
+                totalSetNow = totalSetNow + 1;
+                totalCost = totalSetNow * 550;
+                amountHeader.innerHTML = totalCost;
+                grandTotal.innerHTML = totalCost;
+                addCurrentSeat(currentSeat, "Business", "550");
+            } else {
+                alert("Sorry!! You can't buy more than 4 tickets.");
+            }
         }
     }
 });
