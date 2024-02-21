@@ -52,11 +52,14 @@ function addCurrentSeat(element, businessclass, price) {
 
     // Create a div element to hold the seat information
     const seatDiv = document.createElement('div');
-    seatDiv.classList.add('seat-info', 'flex', 'justify-between', 'w-full');
+    seatDiv.classList.add('seat-info', 'grid', 'grid-cols-3', 'justify-between' ,'w-full');
 
     const seatPTag = document.createElement('p');
     const classPTag = document.createElement('p');
     const pricePTag = document.createElement('p');
+
+    classPTag.classList.add('text-center');
+    pricePTag.classList.add('text-right');
 
     seatPTag.textContent = element;
     classPTag.textContent = businessclass;
