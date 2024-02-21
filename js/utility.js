@@ -48,9 +48,11 @@ function subSeat() {
 }
 
 function addCurrentSeat(element, businessclass, price) {
-    const currentSeatsElement = document.getElementById('current-seats');
-    const businessElement = document.getElementById('business-class');
-    const priceElement = document.getElementById('price');
+     const currentSeatsElement = document.getElementById('current-seats');
+
+    // Create a div element to hold the seat information
+    const seatDiv = document.createElement('div');
+    seatDiv.classList.add('seat-info', 'flex', 'justify-between', 'w-full');
 
     const seatPTag = document.createElement('p');
     const classPTag = document.createElement('p');
@@ -59,20 +61,35 @@ function addCurrentSeat(element, businessclass, price) {
     seatPTag.textContent = element;
     classPTag.textContent = businessclass;
     pricePTag.textContent = price;
-
-    currentSeatsElement.appendChild(seatPTag);
-    businessElement.appendChild(classPTag);
-    priceElement.appendChild(pricePTag);
+    
+    seatDiv.appendChild(seatPTag);
+    seatDiv.appendChild(classPTag);
+    seatDiv.appendChild(pricePTag);
+    currentSeatsElement.appendChild(seatDiv);
 }
 
 // function removeCurrentSeat(element) {
 //     const currentSeatsElement = document.getElementById('current-seats');
+//     console.log(currentSeatsElement);
 //     const seatElements = currentSeatsElement.querySelectorAll('div');
+//     console.log(seatElements);
 //     seatElements.forEach(seatElement => {
 //         if (seatElement.textContent === element) {
 //             seatElement.remove();
 //         }
 //     });
 // }
+
+function removeCurrentSeat(element) {
+    const currentSeatsElement = document.getElementById('current-seats');
+    const seatElements = currentSeatsElement.querySelectorAll('.seat-info');
+
+    seatElements.forEach(seatElement => {
+        const seatPTag = seatElement.querySelector('p');
+        if (seatPTag.textContent === element) {
+            seatElement.remove();
+        }
+    });
+}
 
 

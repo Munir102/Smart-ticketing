@@ -21,8 +21,8 @@ const amountHeader = document.getElementById("total-cost");
 const grandTotal = document.getElementById("grand-total");
 const discountTotal = document.getElementById("discountAmount");
 
-const seats = [];
-console.log(seats);
+const seatsArray = [];
+console.log(seatsArray);
 
 document.getElementById('bus-seat').addEventListener('click', function(event) {
     const clickedSeatId = event.target.id;
@@ -39,11 +39,17 @@ document.getElementById('bus-seat').addEventListener('click', function(event) {
             amountHeader.innerHTML = totalCost;
             grandTotal.innerHTML = totalCost
             removeCurrentSeat(currentSeat);
-            seats.pop() = currentSeat;
+            const index = seatsArray.indexOf(currentSeat);
+            console.log(index);
+            if (index !== -1) {
+                seatsArray.splice(index, 1)
+            }
+            
         }else{
-            seats.push() = currentSeat;
+            seatsArray.push(currentSeat)
             if (totalSetNow < 4) {
-                // console.log(currentSeat);
+                console.log();
+                console.log(seatsArray.length);
                 setBackgroundColotById(parentDiv);
                 substactionElementById();
                 addSeat();
@@ -59,6 +65,7 @@ document.getElementById('bus-seat').addEventListener('click', function(event) {
     }
 });
 
+// For buttons
 function toggleButton() {
     let inputField = document.getElementById('cuponInput');
     let nameInputField = document.getElementById('nameInput');
@@ -68,7 +75,7 @@ function toggleButton() {
     button.disabled = !inputField.value;
     // inputFieldButton.disabled = !nameInputField.value || !phoneInputField.value;
 
-    if (!nameInputField.value || !phoneInputField.value) {
+    if (!nameInputField.value || !phoneInputField.value || seatsArray.length === 0) {
         inputFieldButton.disabled = true;
     } else {
         inputFieldButton.disabled = false;
@@ -81,6 +88,7 @@ document.getElementById('cuponInput').addEventListener('input', toggleButton);
 document.getElementById('nameInput').addEventListener('input', toggleButton);
 document.getElementById('phoneInput').addEventListener('input', toggleButton);
 
+// For Cuppon
 document.getElementById('CupponButton').addEventListener('click', ()=>{
     let inputField = document.getElementById('cuponInput');
     let cupponDiv = document.getElementById('cuppon-section');
@@ -108,4 +116,12 @@ document.getElementById('CupponButton').addEventListener('click', ()=>{
     }
 });
 
+// For Modal
+function showModal() {
+    let modal = document.getElementById('showModal');
+    modal.showModal();
+}
 
+document.getElementById('inputButton').addEventListener('click', function() {
+    showModal();
+});
