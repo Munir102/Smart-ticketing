@@ -21,6 +21,9 @@ const amountHeader = document.getElementById("total-cost");
 const grandTotal = document.getElementById("grand-total");
 const discountTotal = document.getElementById("discountAmount");
 
+const seats = [];
+console.log(seats);
+
 document.getElementById('bus-seat').addEventListener('click', function(event) {
     const clickedSeatId = event.target.id;
     const currentSeat = event.target.innerText;
@@ -36,8 +39,11 @@ document.getElementById('bus-seat').addEventListener('click', function(event) {
             amountHeader.innerHTML = totalCost;
             grandTotal.innerHTML = totalCost
             removeCurrentSeat(currentSeat);
+            seats.pop() = currentSeat;
         }else{
+            seats.push() = currentSeat;
             if (totalSetNow < 4) {
+                // console.log(currentSeat);
                 setBackgroundColotById(parentDiv);
                 substactionElementById();
                 addSeat();
